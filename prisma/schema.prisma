@@ -1,0 +1,14 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Channel {
+  id          Int      @id @default(autoincrement())
+  name        String
+  youtubeId   String   @unique
+  subscribers Int
+  views       Int
+  videos      Int
+  tracking    Boolean  @default(false)
+}
