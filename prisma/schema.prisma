@@ -3,6 +3,10 @@ datasource db {
   url      = "file:./dev.db"
 }
 
+generator client {
+  provider = "prisma-client-js"
+}
+
 model Channel {
   id          Int      @id @default(autoincrement())
   name        String
